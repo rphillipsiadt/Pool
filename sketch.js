@@ -5,12 +5,14 @@ function setup(){
     tables.push(new Table({
         posX:50,
         posY:50,
-        width:200,
-        length:100,
-}))
+        width:600,
+        length:300,
+    }))
+    angleMode(DEGREES);
 }
 
 function draw(){
-    background(0)
+    background(200)
     tables[0].render();
+    tables[0].renderBalls();
 }
