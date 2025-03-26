@@ -7,8 +7,6 @@ function setup(){
         posY:50,
         width:600,
         length:300,
-        velX:0.2,
-        velY:0.2
     }))
     angleMode(DEGREES);
 }
