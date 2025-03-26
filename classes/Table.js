@@ -18,13 +18,23 @@ class Table{
     }
 
     generateBalls(){
-        this.balls.push(new Ball({radius:10}));
+        this.balls.push(new Ball({
+            radius:10,
+            velX:1.453,
+            velY:2,
+            posX:70,
+            posY:50
+        }));
         console.log(this.balls)
     }
 
     renderBalls(){
         push();
         translate(this.pos.x,this.pos.y)
-        this.balls.forEach(ball => ball.render());
+        this.balls.forEach(ball => {
+            ball.render();
+            ball.move();
+            ball.checkPos(this.width,this.length)
+        });
     }
 }
