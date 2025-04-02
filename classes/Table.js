@@ -19,22 +19,22 @@ class Table{
     }
 
     generateBalls(){
-        this.balls.push(new CueBall({radius:10,velX:4.8,velY:3.4,posX:120,posY:this.length/2}));
-        this.balls.push(new BlackBall({radius:10,velX:0,velY:0,posX:this.width-150,posY:this.length/2}));
-        this.balls.push(new RedBall({radius:10,velX:0,velY:0,posX:this.width-150-(2*sqrt(300)),posY:this.length/2}));
-        this.balls.push(new RedBall({radius:10,velX:0,velY:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2}));
-        this.balls.push(new RedBall({radius:10,velX:0,velY:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2-40}));
-        this.balls.push(new RedBall({radius:10,velX:0,velY:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2+40}));
-        this.balls.push(new RedBall({radius:10,velX:0,velY:0,posX:this.width-150+sqrt(300),posY:this.length/2-10}));
-        this.balls.push(new RedBall({radius:10,velX:0,velY:0,posX:this.width-150,posY:this.length/2+20}));
-        this.balls.push(new RedBall({radius:10,velX:0,velY:0,posX:this.width-150,posY:this.length/2-20}));
-        this.balls.push(new YellowBall({radius:10,velX:0,velY:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2+20}));
-        this.balls.push(new YellowBall({radius:10,velX:0,velY:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2-20}));
-        this.balls.push(new YellowBall({radius:10,velX:0,velY:0,posX:this.width-150+sqrt(300),posY:this.length/2+10}));
-        this.balls.push(new YellowBall({radius:10,velX:0,velY:0,posX:this.width-150+sqrt(300),posY:this.length/2+30}));
-        this.balls.push(new YellowBall({radius:10,velX:0,velY:0,posX:this.width-150+sqrt(300),posY:this.length/2-30}));
-        this.balls.push(new YellowBall({radius:10,velX:0,velY:0,posX:this.width-150-sqrt(300),posY:this.length/2+10}));
-        this.balls.push(new YellowBall({radius:10,velX:0,velY:0,posX:this.width-150-sqrt(300),posY:this.length/2-10}));
+        this.balls.push(new CueBall({radius:10,speed:5,angle:54,posX:120,posY:this.length/2}));
+        this.balls.push(new BlackBall({radius:10,speed:0,angle:0,posX:this.width-150,posY:this.length/2}));
+        this.balls.push(new RedBall({radius:10,speed:0,angle:0,posX:this.width-150-(2*sqrt(300)),posY:this.length/2}));
+        this.balls.push(new RedBall({radius:10,speed:0,angle:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2}));
+        this.balls.push(new RedBall({radius:10,speed:0,angle:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2-40}));
+        this.balls.push(new RedBall({radius:10,speed:0,angle:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2+40}));
+        this.balls.push(new RedBall({radius:10,speed:0,angle:0,posX:this.width-150+sqrt(300),posY:this.length/2-10}));
+        this.balls.push(new RedBall({radius:10,speed:0,angle:0,posX:this.width-150,posY:this.length/2+20}));
+        this.balls.push(new RedBall({radius:10,speed:0,angle:0,posX:this.width-150,posY:this.length/2-20}));
+        this.balls.push(new YellowBall({radius:10,speed:0,angle:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2+20}));
+        this.balls.push(new YellowBall({radius:10,speed:0,angle:0,posX:this.width-150+(2*sqrt(300)),posY:this.length/2-20}));
+        this.balls.push(new YellowBall({radius:10,speed:0,angle:0,posX:this.width-150+sqrt(300),posY:this.length/2+10}));
+        this.balls.push(new YellowBall({radius:10,speed:0,angle:0,posX:this.width-150+sqrt(300),posY:this.length/2+30}));
+        this.balls.push(new YellowBall({radius:10,speed:0,angle:0,posX:this.width-150+sqrt(300),posY:this.length/2-30}));
+        this.balls.push(new YellowBall({radius:10,speed:0,angle:0,posX:this.width-150-sqrt(300),posY:this.length/2+10}));
+        this.balls.push(new YellowBall({radius:10,speed:0,angle:0,posX:this.width-150-sqrt(300),posY:this.length/2-10}));
         console.log(this.balls)
     }
 
