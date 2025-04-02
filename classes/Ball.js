@@ -12,7 +12,6 @@ class Ball {
     }
 
     move(){
-        console.log("t")
         this.pos.x+=this.vel.x;
         this.pos.y+=this.vel.y;
 
@@ -37,6 +36,21 @@ class Ball {
         }
         if (this.pos.y+this.vel.y>h-this.radius || this.pos.y+this.vel.y<this.radius){
             this.vel.y = this.vel.y*-0.98
+        }
+    }
+
+    checkCollisions(balls){
+        // console.log(this.vel, this.pos, this.radius)
+        if(this.vel.x > 0 || this.vel.y > 0) {
+            balls.forEach(ball => {
+                let dist = sqrt((this.pos.x-ball.pos.x)**2+(this.pos.y-ball.pos.y)**2);
+                if (dist < this.radius*2) {
+                    console.log("The balls collide")
+                    this.vel.x = this.vel.x*-0.98
+                    this.vel.y = this.vel.y*-0.98
+                }
+                console.log(balls)
+            });
         }
     }
 }

@@ -13,6 +13,7 @@ function setup(){
 
 function draw(){
     background(200)
+    // noLoop()
     tables[0].render();
     tables[0].renderBalls();
 }
