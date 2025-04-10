@@ -7,6 +7,7 @@ function setup(){
         posY:50,
         width:600,
         length:300,
+        radius:10
     }))
     angleMode(DEGREES);
 }
@@ -16,4 +17,8 @@ function draw(){
     // noLoop()
     tables[0].render();
     tables[0].renderBalls();
+}
+
+function mousePressed(){
+    tables[0].hitBall(mouseX,mouseY)
 }
