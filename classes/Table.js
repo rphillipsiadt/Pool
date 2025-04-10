@@ -11,6 +11,7 @@ class Table{
     }
 
     render(){
+        // Render the table
         push();
         translate(this.pos.x,this.pos.y);
         rectMode(CORNERS);
@@ -20,6 +21,7 @@ class Table{
     }
 
     generateBalls(){
+        // Manually generating every ball
         this.balls.push(new CueBall({radius:this.radius,speed:0,angle:0,posX:this.width/5,posY:this.length/2}));
         this.balls.push(new BlackBall({radius:this.radius,speed:0,angle:0,posX:this.width-this.width/4,posY:this.length/2}));
         this.balls.push(new RedBall({radius:this.radius,speed:0,angle:0,posX:this.width-this.width/4-(2*sqrt((2*this.radius)**2-this.radius**2)),posY:this.length/2}));
@@ -36,12 +38,12 @@ class Table{
         this.balls.push(new YellowBall({radius:this.radius,speed:0,angle:0,posX:this.width-this.width/4+sqrt((2*this.radius)**2-this.radius**2),posY:this.length/2-3*this.radius}));
         this.balls.push(new YellowBall({radius:this.radius,speed:0,angle:0,posX:this.width-this.width/4-sqrt((2*this.radius)**2-this.radius**2),posY:this.length/2+this.radius}));
         this.balls.push(new YellowBall({radius:this.radius,speed:0,angle:0,posX:this.width-this.width/4-sqrt((2*this.radius)**2-this.radius**2),posY:this.length/2-this.radius}));
-        console.log(this.balls)
     }
 
     renderBalls(){
         push();
         translate(this.pos.x,this.pos.y)
+        // Run the functions for the balls
         for (let i = 0;i<this.balls.length;i++){
             this.balls[i].render();
             this.balls[i].move();
@@ -53,6 +55,7 @@ class Table{
     }
 
     hitBall(mouseX,mouseY){
+        // Run the hitBall function if the mouse was pressed
         this.balls[0].hitBall(mouseX,mouseY)
     }
 }

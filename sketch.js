@@ -18,7 +18,7 @@ function draw(){
     tables[0].render();
     tables[0].renderBalls();
 }
-
+// Checks if the mouse clicked
 function mousePressed(){
     tables[0].hitBall(mouseX,mouseY)
 }
